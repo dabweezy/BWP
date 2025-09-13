@@ -352,7 +352,7 @@ function createParticles() {
             border-radius: 50%;
             left: ${Math.random() * 100}%;
             top: ${Math.random() * 100}%;
-            animation: float ${Math.random() * 20 + 10}s linear infinite;
+            animation: particleFloat ${Math.random() * 20 + 10}s ease-in-out infinite;
             animation-delay: ${Math.random() * 5}s;
         `;
         particlesContainer.appendChild(particle);
