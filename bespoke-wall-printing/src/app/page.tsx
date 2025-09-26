@@ -1,5 +1,3 @@
-import Image from 'next/image'
-import Link from 'next/link'
 import { Hero } from '@/components/Hero'
 import { TransformHome } from '@/components/TransformHome'
 import { Services } from '@/components/Services'
@@ -10,7 +8,7 @@ import { Testimonials } from '@/components/Testimonials'
 import { FAQ } from '@/components/FAQ'
 import { Contact } from '@/components/Contact'
 import { Footer } from '@/components/Footer'
-import { HeroHighlight, Highlight } from '@/components/HeroHighlight'
+import { Highlight } from '@/components/HeroHighlight'
 
 export default function Home() {
   return (

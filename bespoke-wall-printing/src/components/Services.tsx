@@ -111,7 +111,7 @@ export function Services() {
                 {/* Left side - Text content */}
                 <div className="space-y-6">
                   <p className="text-lg text-slate-600 leading-relaxed">
-                    Transform your office, reception, or boardroom with Bespoke Wall Printing's direct UV wall printing service – the perfect solution for adding branding elements or captivating murals to your workspace.
+                    Transform your office, reception, or boardroom with Bespoke Wall Printing&apos;s direct UV wall printing service – the perfect solution for adding branding elements or captivating murals to your workspace.
                   </p>
                   <p className="text-lg text-slate-600 leading-relaxed">
                     Our innovative technology allows us to print high-resolution images on a variety of surfaces, from brick and wood to glass. This makes our service ideal for eye-catching shop front displays, stylish café or restaurant wall menus and designs, and even motivational graphics for gym walls. Let us help you bring your vision to life with stunning, personalised prints that leave a lasting impression.
