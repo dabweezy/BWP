@@ -69,9 +69,9 @@ const Card = ({ card, index, layout }: { card: Card; index: number; layout?: boo
       ref={ref}
       className="relative group flex items-center justify-center"
       style={{
-        height: "300px",
-        width: "280px",
-        padding: "10px",
+        height: "250px",
+        width: "220px",
+        padding: "8px",
       }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -121,10 +121,10 @@ const Carousel = ({ items, initialScroll = 0 }: { items: JSX.Element[]; initialS
   return (
     <div
       ref={scrollRef}
-      className="flex items-center gap-4 sm:gap-8 overflow-x-auto overflow-y-visible scrollbar-hide py-4 sm:py-8 px-2 sm:px-4"
+      className="flex items-center gap-3 sm:gap-8 overflow-x-auto overflow-y-visible scrollbar-hide py-3 sm:py-8 px-1 sm:px-4"
       style={{
         scrollSnapType: "x mandatory",
-        height: "350px",
+        height: "280px",
       }}
     >
       {items.map((item, index) => (
