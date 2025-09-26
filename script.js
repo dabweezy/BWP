@@ -39,13 +39,13 @@ function updateHeader() {
     const scrollY = window.scrollY;
     
     if (scrollY > 100) {
-        header.style.background = 'rgba(255, 255, 255, 0.98)';
-        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+        header.style.background = 'rgba(15, 23, 42, 0.9)';
+        header.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3)';
         header.style.backdropFilter = 'blur(20px)';
     } else {
-        header.style.background = 'rgba(255, 255, 255, 0.95)';
+        header.style.background = 'transparent';
         header.style.boxShadow = 'none';
-        header.style.backdropFilter = 'blur(10px)';
+        header.style.backdropFilter = 'blur(20px)';
     }
     
     // Hide/show header on scroll
@@ -95,10 +95,10 @@ document.querySelectorAll('.nav-link').forEach(link => {
 const contactForm = document.querySelector('.contact-form form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(this);
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(this);
         const name = this.querySelector('input[type="text"]').value.trim();
         const email = this.querySelector('input[type="email"]').value.trim();
         const phone = this.querySelector('input[type="tel"]').value.trim();
@@ -127,25 +127,25 @@ if (contactForm) {
         
         if (errors.length > 0) {
             showNotification(errors.join('<br>'), 'error');
-            return;
-        }
-        
+        return;
+    }
+    
         // Simulate form submission with enhanced feedback
-        const button = this.querySelector('button');
+    const button = this.querySelector('button');
         const originalText = button.innerHTML;
         const originalDisabled = button.disabled;
         
         button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-        button.disabled = true;
-        
+    button.disabled = true;
+    
         // Simulate API call
-        setTimeout(() => {
+    setTimeout(() => {
             showNotification('Thank you for your message! We will get back to you within 24 hours.', 'success');
-            this.reset();
+        this.reset();
             button.innerHTML = originalText;
             button.disabled = originalDisabled;
-        }, 2000);
-    });
+    }, 2000);
+});
 }
 
 // Email validation function
@@ -307,31 +307,74 @@ function revealOnScroll() {
 
 window.addEventListener('scroll', revealOnScroll);
 
-// Typing animation for hero title
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
+// Enhanced hero title animation
+function animateHeroTitle() {
+    const heroTitle = document.querySelector('.hero-title');
+    const heroSubtitle = document.querySelector('.hero-subtitle');
+    const heroTagline = document.querySelector('.hero-tagline');
+    const heroDescription = document.querySelector('.hero-description');
+    const heroButtons = document.querySelector('.hero-buttons');
     
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
+    if (heroTitle) {
+        // Add fade-in animation classes
+        heroTitle.style.opacity = '0';
+        heroTitle.style.transform = 'translateY(30px)';
+        heroTitle.style.transition = 'all 0.8s ease';
+        
+        setTimeout(() => {
+            heroTitle.style.opacity = '1';
+            heroTitle.style.transform = 'translateY(0)';
+        }, 200);
     }
     
-    type();
-}
-
-// Initialize typing animation
-document.addEventListener('DOMContentLoaded', () => {
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        const originalText = heroTitle.textContent;
+    if (heroSubtitle) {
+        heroSubtitle.style.opacity = '0';
+        heroSubtitle.style.transform = 'translateY(30px)';
+        heroSubtitle.style.transition = 'all 0.8s ease';
+        
         setTimeout(() => {
-            typeWriter(heroTitle, originalText, 50);
+            heroSubtitle.style.opacity = '1';
+            heroSubtitle.style.transform = 'translateY(0)';
+        }, 400);
+    }
+    
+    if (heroTagline) {
+        heroTagline.style.opacity = '0';
+        heroTagline.style.transform = 'translateY(30px)';
+        heroTagline.style.transition = 'all 0.8s ease';
+        
+        setTimeout(() => {
+            heroTagline.style.opacity = '1';
+            heroTagline.style.transform = 'translateY(0)';
+        }, 600);
+    }
+    
+    if (heroDescription) {
+        heroDescription.style.opacity = '0';
+        heroDescription.style.transform = 'translateY(30px)';
+        heroDescription.style.transition = 'all 0.8s ease';
+        
+        setTimeout(() => {
+            heroDescription.style.opacity = '1';
+            heroDescription.style.transform = 'translateY(0)';
+        }, 800);
+    }
+    
+    if (heroButtons) {
+        heroButtons.style.opacity = '0';
+        heroButtons.style.transform = 'translateY(30px)';
+        heroButtons.style.transition = 'all 0.8s ease';
+        
+        setTimeout(() => {
+            heroButtons.style.opacity = '1';
+            heroButtons.style.transform = 'translateY(0)';
         }, 1000);
     }
+}
+
+// Initialize hero animation
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(animateHeroTitle, 300);
 });
 
 // Particle animation for hero background
@@ -344,17 +387,26 @@ function createParticles() {
     for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
         particle.className = 'particle';
-        particle.style.cssText = `
-            position: absolute;
-            width: ${Math.random() * 4 + 2}px;
-            height: ${Math.random() * 4 + 2}px;
-            background: rgba(37, 99, 235, ${Math.random() * 0.5 + 0.1});
-            border-radius: 50%;
-            left: ${Math.random() * 100}%;
-            top: ${Math.random() * 100}%;
-            animation: particleFloat ${Math.random() * 20 + 10}s ease-in-out infinite;
-            animation-delay: ${Math.random() * 5}s;
-        `;
+                const colors = [
+                    'rgba(201, 54, 228, 0.6)',  // Purple (#C936E4)
+                    'rgba(130, 131, 255, 0.5)', // Blue (#8283FF)
+                    'rgba(255, 167, 113, 0.4)', // Orange (#FFA771)
+                    'rgba(255, 255, 255, 0.3)', // White (#FFFFFF)
+                    'rgba(5, 6, 35, 0.4)'       // Dark Blue (#050623)
+                ];
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                
+                particle.style.cssText = `
+                    position: absolute;
+                    width: ${Math.random() * 4 + 2}px;
+                    height: ${Math.random() * 4 + 2}px;
+                    background: ${randomColor};
+                    border-radius: 50%;
+                    left: ${Math.random() * 100}%;
+                    top: ${Math.random() * 100}%;
+                    animation: particleFloat ${Math.random() * 20 + 10}s ease-in-out infinite;
+                    animation-delay: ${Math.random() * 5}s;
+                `;
         particlesContainer.appendChild(particle);
     }
 }
@@ -458,10 +510,10 @@ style.textContent = `
     
     @keyframes float {
         0%, 100% {
-            transform: translateY(0px) rotate(0deg);
+            transform: translateY(0px);
         }
         50% {
-            transform: translateY(-20px) rotate(180deg);
+            transform: translateY(-20px);
         }
     }
 `;
@@ -530,6 +582,115 @@ document.addEventListener('click', (e) => {
             button_text: e.target.textContent.trim(),
             button_class: e.target.className,
             timestamp: new Date().toISOString()
+        });
+    }
+});
+
+// Draggable Cards functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.draggable-card');
+    
+    if (cards.length > 0) {
+        cards.forEach(card => {
+            let isDragging = false;
+            let startX, startY, initialX, initialY;
+            
+            // Mouse events
+            card.addEventListener('mousedown', startDrag);
+            document.addEventListener('mousemove', drag);
+            document.addEventListener('mouseup', endDrag);
+            
+            // Touch events for mobile
+            card.addEventListener('touchstart', startDragTouch);
+            document.addEventListener('touchmove', dragTouch);
+            document.addEventListener('touchend', endDrag);
+            
+            function startDrag(e) {
+                isDragging = true;
+                startX = e.clientX;
+                startY = e.clientY;
+                initialX = card.offsetLeft;
+                initialY = card.offsetTop;
+                card.style.cursor = 'grabbing';
+                card.style.zIndex = '1000';
+                e.preventDefault();
+            }
+            
+            function startDragTouch(e) {
+                isDragging = true;
+                startX = e.touches[0].clientX;
+                startY = e.touches[0].clientY;
+                initialX = card.offsetLeft;
+                initialY = card.offsetTop;
+                card.style.zIndex = '1000';
+                e.preventDefault();
+            }
+            
+            function drag(e) {
+                if (!isDragging) return;
+                
+                const currentX = e.clientX;
+                const currentY = e.clientY;
+                const diffX = currentX - startX;
+                const diffY = currentY - startY;
+                
+                const newX = initialX + diffX;
+                const newY = initialY + diffY;
+                
+                // Keep cards within container bounds
+                const container = card.parentElement;
+                const containerRect = container.getBoundingClientRect();
+                const cardRect = card.getBoundingClientRect();
+                
+                const minX = 0;
+                const maxX = containerRect.width - cardRect.width;
+                const minY = 0;
+                const maxY = containerRect.height - cardRect.height;
+                
+                const clampedX = Math.max(minX, Math.min(maxX, newX));
+                const clampedY = Math.max(minY, Math.min(maxY, newY));
+                
+                card.style.left = clampedX + 'px';
+                card.style.top = clampedY + 'px';
+                card.style.right = 'auto';
+            }
+            
+            function dragTouch(e) {
+                if (!isDragging) return;
+                
+                const currentX = e.touches[0].clientX;
+                const currentY = e.touches[0].clientY;
+                const diffX = currentX - startX;
+                const diffY = currentY - startY;
+                
+                const newX = initialX + diffX;
+                const newY = initialY + diffY;
+                
+                // Keep cards within container bounds
+                const container = card.parentElement;
+                const containerRect = container.getBoundingClientRect();
+                const cardRect = card.getBoundingClientRect();
+                
+                const minX = 0;
+                const maxX = containerRect.width - cardRect.width;
+                const minY = 0;
+                const maxY = containerRect.height - cardRect.height;
+                
+                const clampedX = Math.max(minX, Math.min(maxX, newX));
+                const clampedY = Math.max(minY, Math.min(maxY, newY));
+                
+                card.style.left = clampedX + 'px';
+                card.style.top = clampedY + 'px';
+                card.style.right = 'auto';
+            }
+            
+            function endDrag() {
+                if (!isDragging) return;
+                
+                isDragging = false;
+                card.style.cursor = 'grab';
+                card.style.zIndex = '2';
+            }
         });
     }
 });

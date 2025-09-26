@@ -6,6 +6,8 @@
     <title>Bespoke Wall Printing - Where Creativity Meets Innovation</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/neue-montreal" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700;800;900&family=SF+Pro+Text:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -13,15 +15,19 @@
     <header class="header">
         <nav class="navbar">
             <div class="nav-container">
-                <div class="nav-logo">
-                    <h2>Bespoke Wall Printing</h2>
-                </div>
                 <div class="nav-menu">
-                    <a href="#home" class="nav-link">Home</a>
-                    <a href="#about" class="nav-link">About</a>
+                    <div class="border-beam"></div>
+                    <a href="#home" class="nav-logo">
+                        <img src="https://i.ibb.co/jkdk4sh9/small-logo.png" alt="Bespoke Wall Printing Logo" class="logo">
+                    </a>
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
                     <a href="#faqs" class="nav-link">FAQs</a>
                     <a href="#contact" class="nav-link">Contact</a>
-                    <a href="#contact" class="nav-link cta-button">Get Quote</a>
+                    <a href="#contact" class="cta-button">
+                        Get Quote
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
                 <div class="mobile-menu-toggle">
                     <span></span>
@@ -32,55 +38,92 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-background">
-            <div class="hero-particles"></div>
-        </div>
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Bespoke Wall Printing</h1>
-                <h2 class="hero-subtitle">Where creativity meets innovation</h2>
-                <p class="hero-tagline">Any image • Any surface • Any size</p>
-                <p class="hero-description">Welcome to the future of interior design with Bespoke Wall Printing! Our revolutionary direct UV printing technology delivers stunning, high-resolution designs and murals for your home or business. What makes us stand out? It's not just the beauty of our prints – it's also their unmatched quality, cost-effectiveness, and simple application method.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">
-                        <i class="fas fa-phone"></i>
-                        Contact us
-                    </a>
-                    <a href="#about" class="btn btn-secondary">
-                        <i class="fas fa-play"></i>
-                        Learn More
-                    </a>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-background">
+                <div class="hero-gradient"></div>
+                <div class="hero-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="hero-image-grid">
-                    <div class="image-card image-1">
-                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop&crop=center" alt="Children's playroom with Australian animals wall decal" />
-                        <div class="image-overlay">
-                            <span>Playroom with animal print</span>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-text">✨ Premium Wall Art Solutions</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Transform Your Space with
+                        <span class="gradient-text">Stunning Wall Prints</span>
+                    </h1>
+                    <p class="hero-description">
+                        Create breathtaking wall art with our cutting-edge UV printing technology. 
+                        From residential homes to commercial spaces, we bring your vision to life with 
+                        durable, fade-resistant prints that last for years.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">
+                            <span>Get Your Quote</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#faqs" class="btn btn-secondary">
+                            <i class="fas fa-play"></i>
+                            <span>Watch Demo</span>
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Happy Customers</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">5★</div>
+                            <div class="stat-label">Average Rating</div>
                         </div>
                     </div>
-                    <div class="image-card image-2">
-                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop&crop=center" alt="Living room with motorcycle wall mural" />
-                        <div class="image-overlay">
-                            <span>Motorcycle wall art</span>
+                </div>
+                <div class="hero-visual">
+                    <div class="draggable-cards-container">
+                        <p class="draggable-cards-text">
+                            Transform your space with stunning wall art that brings your vision to life.
+                        </p>
+                        <div class="draggable-card" style="top: 40px; left: 20%; transform: rotate(-5deg);">
+                            <img src="https://images.unsplash.com/photo-1732310216648-603c0255c000?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Modern Living Room">
+                            <h3>Modern Living</h3>
                         </div>
-                    </div>
-                    <div class="image-card image-3">
-                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop&crop=center" alt="Elegant living room with floral mural" />
-                        <div class="image-overlay">
-                            <span>Living room feature wall</span>
+                        <div class="draggable-card" style="top: 160px; left: 25%; transform: rotate(-7deg);">
+                            <img src="https://images.unsplash.com/photo-1697909623564-3dae17f6c20b?q=80&w=2667&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Abstract Design">
+                            <h3>Abstract Art</h3>
+                        </div>
+                        <div class="draggable-card" style="top: 20px; left: 40%; transform: rotate(8deg);">
+                            <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=2600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Nature Scene">
+                            <h3>Nature Scene</h3>
+                        </div>
+                        <div class="draggable-card" style="top: 128px; left: 55%; transform: rotate(10deg);">
+                            <img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?q=80&w=3648&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Urban Landscape">
+                            <h3>Urban Style</h3>
+                        </div>
+                        <div class="draggable-card" style="top: 80px; right: 35%; transform: rotate(2deg);">
+                            <img src="https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mountain View">
+                            <h3>Mountain View</h3>
+                        </div>
+                        <div class="draggable-card" style="top: 96px; left: 45%; transform: rotate(-7deg);">
+                            <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=3070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Coastal View">
+                            <h3>Coastal View</h3>
+                        </div>
+                        <div class="draggable-card" style="top: 32px; left: 30%; transform: rotate(4deg);">
+                            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Forest Scene">
+                            <h3>Forest Scene</h3>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
-        </div>
-    </section>
+        </section>
 
     <!-- Transform Home Section -->
     <section class="transform-home">
@@ -104,7 +147,7 @@
                             </div>
                         </div>
                         <div class="showcase-item">
-                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop&crop=center" alt="Living room with motorcycle wall mural" />
+                            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&h=400&fit=crop&crop=center" alt="Living room with motorcycle wall mural" />
                             <div class="image-overlay">
                                 <span>Sofa with motorcycle print behind</span>
                             </div>
@@ -128,19 +171,19 @@
                 <div class="content-images">
                     <div class="image-showcase">
                         <div class="showcase-item">
-                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop&crop=center" alt="Restaurant with pasta-themed wall art" />
+                            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop&crop=center" alt="Restaurant with pasta-themed wall art" />
                             <div class="image-overlay">
                                 <span>Diner with food print on the wall</span>
                             </div>
                         </div>
                         <div class="showcase-item">
-                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop&crop=center" alt="Conference room with motivational quote" />
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop&crop=center" alt="Conference room with motivational quote" />
                             <div class="image-overlay">
                                 <span>Meeting room with motivational print</span>
                             </div>
                         </div>
                         <div class="showcase-item">
-                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop&crop=center" alt="Urban garage with horse graffiti" />
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&crop=center" alt="Urban garage with horse graffiti" />
                             <div class="image-overlay">
                                 <span>Gym with motivational print on mirror</span>
                             </div>
@@ -243,6 +286,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- Why UV Section -->
     <section class="why-uv">
