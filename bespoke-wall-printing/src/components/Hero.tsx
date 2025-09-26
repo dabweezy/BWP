@@ -39,23 +39,23 @@ export function Hero() {
   return (
     <section className="relative min-h-screen bg-gray-200 overflow-hidden">
       {/* Main curved container */}
-      <div className="relative z-10 pt-6 pb-12 sm:pt-6 sm:pb-20">
-        <div className="w-full px-3 sm:px-4">
-          <div className="max-w-[98%] sm:max-w-[96%] mx-auto">
+      <div className="relative z-10 pt-6 pb-20">
+        <div className="w-full px-4">
+          <div className="max-w-[96%] mx-auto">
             {/* Large curved bubble container */}
-            <div className="bg-gradient-to-br from-slate-50 to-white backdrop-blur-sm rounded-[2rem] sm:rounded-[4rem] border-4 sm:border-8 border-white p-6 sm:p-8 lg:p-12 relative overflow-hidden shadow-2xl" style={{
-              boxShadow: 'inset 0 0 0 2px white, 0 0 0 4px white, 0 20px 40px rgba(0,0,0,0.1)'
+            <div className="bg-[#E8E8E8] backdrop-blur-sm rounded-[4rem] border-8 border-white p-8 lg:p-12 relative overflow-hidden" style={{
+              boxShadow: 'inset 0 0 0 4px white, 0 0 0 8px white'
             }}>
               {/* Navigation Bar inside the container */}
-              <div className="mb-8 sm:mb-12">
+              <div className="mb-12">
                 <nav className="flex justify-center">
-                  <div className="bg-white/80 backdrop-blur-lg rounded-full px-4 sm:px-8 py-3 sm:py-3 shadow-xl border border-white/30 w-full max-w-sm sm:max-w-none">
-                    <div className="flex items-center justify-between sm:space-x-8">
+                  <div className="bg-white/60 backdrop-blur-lg rounded-full px-8 py-3 shadow-lg border border-white/20">
+                    <div className="flex items-center space-x-8">
                       <a href="/" className="flex items-center">
                         <img
                           src="https://i.ibb.co/jkdk4sh9/small-logo.png"
                           alt="Bespoke Wall Printing Logo"
-                          className="w-6 h-6 sm:w-8 sm:h-8"
+                          className="w-8 h-8"
                         />
                       </a>
                       
@@ -76,7 +76,7 @@ export function Hero() {
 
                       <a
                         href="#contact"
-                        className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 sm:px-6 py-2 sm:py-2 rounded-full font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg text-sm sm:text-base"
+                        className="bg-slate-900 text-white px-6 py-2 rounded-full font-medium hover:bg-slate-800 transition-colors"
                       >
                         Get Quote
                       </a>
@@ -85,63 +85,63 @@ export function Hero() {
                 </nav>
               </div>
               
-              <div className="relative z-10 grid lg:grid-cols-2 gap-8 sm:gap-8 lg:gap-16 items-center">
+              <div className="relative z-10 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 {/* Left Content */}
-                <div className="space-y-6 sm:space-y-8">
-                  <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-blue-50 to-purple-50 text-slate-700 rounded-full text-sm sm:text-sm font-medium shadow-lg border border-blue-200">
-                    <span className="w-2 h-2 sm:w-2 sm:h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mr-3 animate-pulse"></span>
+                <div className="space-y-8">
+                  <div className="inline-flex items-center px-6 py-3 bg-slate-100 text-slate-700 rounded-full text-sm font-medium shadow-sm border border-slate-200">
+                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3 animate-pulse"></span>
                     Revolutionary UV Printing Technology
                   </div>
 
-                  <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight">
-                    <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-purple-900 bg-clip-text text-transparent">Transform</span>
+                  <h1 className="text-5xl lg:text-7xl font-bold text-slate-900 leading-tight tracking-tight">
+                    <span className="text-slate-900">Transform</span>
                     <br />
-                    <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Your Space</span>
+                    <span className="text-slate-900">Your Space</span>
                   </h1>
 
-                  <p className="text-base sm:text-lg lg:text-xl text-slate-600 leading-relaxed max-w-lg">
+                  <p className="text-xl text-slate-600 leading-relaxed max-w-lg">
                     Revolutionary direct UV printing technology delivering stunning, high-resolution designs and murals for your home or business.
                   </p>
 
-                  <div className="flex flex-col sm:flex-row gap-4 sm:gap-4">
+                  <div className="flex flex-col sm:flex-row gap-4">
                     <a
                       href="#contact"
-                      className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 text-sm sm:text-base"
+                      className="inline-flex items-center justify-center px-8 py-4 bg-slate-900 text-white rounded-full font-semibold hover:bg-slate-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
                       Get Started
-                      <svg className="ml-2 w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                     </a>
                     <a
                       href="#process"
-                      className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white text-slate-700 rounded-full font-semibold hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all duration-300 shadow-lg hover:shadow-xl border border-slate-200 text-sm sm:text-base"
+                      className="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-700 rounded-full font-semibold hover:bg-slate-50 transition-all duration-300 shadow-lg hover:shadow-xl border border-slate-200"
                     >
-                      <svg className="mr-2 w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                       View Process
                     </a>
                   </div>
                   
-                    {/* Feature highlights - Enhanced cards */}
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 pt-6 sm:pt-8">
-                      <div className="bg-gradient-to-br from-blue-50 to-white rounded-xl p-4 sm:p-6 shadow-lg border border-blue-100 hover:shadow-xl transition-all duration-300 hover:scale-105">
-                        <div className="text-2xl sm:text-3xl mb-3">🎨</div>
-                        <h3 className="font-bold text-slate-900 mb-2 text-sm sm:text-base">Any Image</h3>
-                        <p className="text-xs sm:text-sm text-slate-600">Custom Designs</p>
+                    {/* Feature highlights - Clean cards */}
+                    <div className="grid grid-cols-3 gap-6 pt-8">
+                      <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow duration-200">
+                        <div className="text-2xl mb-3">🎨</div>
+                        <h3 className="font-semibold text-slate-900 mb-2">Any Image</h3>
+                        <p className="text-sm text-slate-600">Custom Designs</p>
                       </div>
                       
-                      <div className="bg-gradient-to-br from-purple-50 to-white rounded-xl p-4 sm:p-6 shadow-lg border border-purple-100 hover:shadow-xl transition-all duration-300 hover:scale-105">
-                        <div className="text-2xl sm:text-3xl mb-3">🏠</div>
-                        <h3 className="font-bold text-slate-900 mb-2 text-sm sm:text-base">Any Surface</h3>
-                        <p className="text-xs sm:text-sm text-slate-600">Walls, Tiles, Glass</p>
+                      <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow duration-200">
+                        <div className="text-2xl mb-3">🏠</div>
+                        <h3 className="font-semibold text-slate-900 mb-2">Any Surface</h3>
+                        <p className="text-sm text-slate-600">Walls, Tiles, Glass</p>
                       </div>
                       
-                      <div className="bg-gradient-to-br from-green-50 to-white rounded-xl p-4 sm:p-6 shadow-lg border border-green-100 hover:shadow-xl transition-all duration-300 hover:scale-105">
-                        <div className="text-2xl sm:text-3xl mb-3">📏</div>
-                        <h3 className="font-bold text-slate-900 mb-2 text-sm sm:text-base">Any Size</h3>
-                        <p className="text-xs sm:text-sm text-slate-600">From Small to Large</p>
+                      <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow duration-200">
+                        <div className="text-2xl mb-3">📏</div>
+                        <h3 className="font-semibold text-slate-900 mb-2">Any Size</h3>
+                        <p className="text-sm text-slate-600">From Small to Large</p>
                       </div>
                     </div>
                 </div>
