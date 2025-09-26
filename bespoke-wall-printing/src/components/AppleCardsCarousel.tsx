@@ -69,9 +69,9 @@ const Card = ({ card, index, layout }: { card: Card; index: number; layout?: boo
       ref={ref}
       className="relative group flex items-center justify-center"
       style={{
-        height: "500px",
-        width: "400px",
-        padding: "20px",
+        height: "300px",
+        width: "280px",
+        padding: "10px",
       }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -94,12 +94,12 @@ const Card = ({ card, index, layout }: { card: Card; index: number; layout?: boo
             className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-            <div className="text-sm font-medium text-white/80 mb-2">
+          <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-6 text-white">
+            <div className="text-xs sm:text-sm font-medium text-white/80 mb-1 sm:mb-2">
               {card.category}
             </div>
-            <h3 className="text-2xl font-bold mb-2">{card.title}</h3>
-            <p className="text-white/90 text-sm leading-relaxed">
+            <h3 className="text-lg sm:text-2xl font-bold mb-1 sm:mb-2">{card.title}</h3>
+            <p className="text-white/90 text-xs sm:text-sm leading-relaxed">
               {card.content}
             </p>
           </div>
@@ -121,10 +121,10 @@ const Carousel = ({ items, initialScroll = 0 }: { items: JSX.Element[]; initialS
   return (
     <div
       ref={scrollRef}
-      className="flex items-center gap-8 overflow-x-auto overflow-y-visible scrollbar-hide py-8 px-4"
+      className="flex items-center gap-4 sm:gap-8 overflow-x-auto overflow-y-visible scrollbar-hide py-4 sm:py-8 px-2 sm:px-4"
       style={{
         scrollSnapType: "x mandatory",
-        height: "580px",
+        height: "350px",
       }}
     >
       {items.map((item, index) => (

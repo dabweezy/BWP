@@ -9,6 +9,14 @@ body {
   width: 111.11%; /* Compensate for the 10% reduction to maintain full width */
 }
 
+/* Mobile-specific adjustments */
+@media (max-width: 640px) {
+  body {
+    transform: scale(1);
+    width: 100%;
+  }
+}
+
 /* Hide scrollbar for carousel */
 .scrollbar-hide {
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
