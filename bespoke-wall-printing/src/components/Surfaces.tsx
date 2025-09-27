@@ -1,6 +1,6 @@
 export function Surfaces() {
   return (
-    <section className="py-24 bg-gray-200 relative overflow-hidden">
+    <section className="py-12 sm:py-24 bg-gray-200 relative overflow-hidden">
       
       <div className="w-full px-4 relative z-10">
         <div className="max-w-[96%] mx-auto">

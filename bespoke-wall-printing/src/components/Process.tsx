@@ -1,6 +1,6 @@
 export function Process() {
   return (
-    <section id="process" className="py-24 bg-gray-200 relative overflow-hidden">
+    <section id="process" className="py-12 sm:py-24 bg-gray-200 relative overflow-hidden">
       
       <div className="w-full px-4 relative z-10">
         <div className="max-w-[96%] mx-auto">

@@ -121,14 +121,25 @@ const Carousel = ({ items, initialScroll = 0 }: { items: JSX.Element[]; initialS
   return (
     <div
       ref={scrollRef}
-      className="flex items-center gap-8 overflow-x-auto overflow-y-visible scrollbar-hide py-8 px-4"
+      className="flex items-center gap-8 overflow-x-auto scrollbar-hide py-8 px-4"
       style={{
-        scrollSnapType: "x mandatory",
         height: "580px",
+        overflowY: "hidden",
+        touchAction: "none",
+        pointerEvents: "none",
+        position: "relative",
+        zIndex: 1,
       }}
     >
       {items.map((item, index) => (
-        <div key={index} className="flex items-center justify-center" style={{ scrollSnapAlign: "start" }}>
+        <div 
+          key={index} 
+          className="flex items-center justify-center"
+          style={{
+            pointerEvents: "auto",
+            touchAction: "pan-x",
+          }}
+        >
           {item}
         </div>
       ))}

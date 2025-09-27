@@ -12,11 +12,11 @@ import { Highlight } from '@/components/HeroHighlight'
 
 export default function Home() {
   return (
-           <main className="min-h-screen bg-gray-200">
+           <main className="bg-gray-200">
       <Hero />
       
       {/* Transition section - Playful bubble design */}
-      <section className="py-24 bg-gray-200 relative overflow-hidden">
+      <section className="py-24 bg-gray-200 relative">
         
         <div className="container mx-auto px-8 lg:px-16 xl:px-24 relative z-10">
           <div className="max-w-5xl mx-auto">
