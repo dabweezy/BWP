@@ -12,7 +12,7 @@ import { Highlight } from '@/components/HeroHighlight'
 
 export default function Home() {
   return (
-           <main className="bg-gray-200">
+           <main className="bg-gray-200 overflow-x-hidden">
       <Hero />
       
       {/* Transition section - Playful bubble design */}
